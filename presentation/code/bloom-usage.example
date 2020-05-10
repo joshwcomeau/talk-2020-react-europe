@@ -1,0 +1,17 @@
+return (
+  <>
+    <Bloom>
+      <SideLaser side="left" />
+      <SideLaser side="right" />
+      <BackLaser />
+      <PrimaryLight />
+    </Bloom>
+
+    <NoBloom>
+      <LargeRings />
+      <SmallRings />
+      <StaticEnvironment />
+      <AmbientLighting />
+    </NoBloom>
+  </>
+);

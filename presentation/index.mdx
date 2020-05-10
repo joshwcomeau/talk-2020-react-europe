@@ -1,0 +1,1055 @@
+import { Cite } from 'spectacle';
+import CodeSlide from 'spectacle-code-slide';
+
+import { LightSlide } from './slides';
+import TitleCard from '../src/components/TitleCard';
+import SpacedRow from '../src/components/SpacedRow';
+import Avatar from '../src/components/Avatar';
+import Footnote from '../src/components/Footnote';
+import AnimationIntroScreen from '../src/components/AnimationIntroScreen';
+import ExternalLink from '../src/components/ExternalLink';
+import FlexRow from '../src/components/FlexRow';
+import TwitterHandle from '../src/components/TwitterHandle';
+import BigNumber from '../src/components/BigNumber';
+
+import './index.css';
+
+---
+
+import amusement2020 from '../assets/amusement2020.jpg'
+
+<img src={amusement2020} style={{ width: '100%' }} />
+
+<!-- I spent many of my teenage years in this room. I played a few games, but my favourite was... -->
+
+
+---
+
+import ddr from '../assets/ddr.gif'
+
+<img src={ddr} style={{ width: '100%' }} />
+
+
+<!-- Dance Dance Revolution. You step on panels to the beat of music. I spent much of my teenage years in arcades getting very good at it. -->
+
+---
+
+import closed from '../assets/closed.jpg'
+
+<img src={closed} style={{ maxHeight: '80vh' }} />
+
+---
+
+import beatSaberExplain from '../assets/beat-saber-explain.gif'
+
+<img src={beatSaberExplain} style={{ width: '90vh' }} />
+
+---
+
+import beatSaberPlayer from '../assets/beat-saber-player.gif'
+
+<img src={beatSaberPlayer} style={{ width: '90vh' }} />
+
+---
+
+import beatSaberInGame from '../assets/beat-saber-in-game.gif'
+
+<img src={beatSaberInGame} style={{ width: '90vh' }} />
+
+<!-- About a year ago I discovered Beat Saber, a VR rhythm game. Despite how different it looks, it's the same idea, you hit things according to the rhythm of the song. -->
+
+---
+
+# Choreography
+
+<!-- Folks might think that the blocks are generated randomly, but actually they're placed strategically by talented choreographers. They're known as maps; each song has a unique map, and someone probably spent many hours coming up with the block arrangement -->
+
+---
+
+import beatSaberSongMenu from '../assets/beat-saber-song-menu.jpg'
+
+<img src={beatSaberSongMenu} style={{ width: '90vh' }} />
+
+
+<!-- When you buy Beat Saber, you get about two dozen songs for free. This is nowhere near enough; you can get bored of these songs very quickly. -->
+
+---
+
+# Custom Maps
+
+---
+
+import beatSaver from '../assets/beatsaver.gif'
+
+<img src={beatSaver} style={{ width: '90vh' }} />
+
+<!-- There are these online communities that have popped up that let you download custom maps. There's hundreds of thousands of uploaded songs... but most of them aren't that good. -->
+
+---
+
+# 🤩
+
+<!-- I very quickly decided I wanted to make my own maps, to all my favourite music.
+So I looked into the existing mapping software... -->
+
+---
+
+# 😭
+
+<!-- ...and I was not a fan. -->
+
+---
+
+import mediocreMapper from '../assets/mediocre-mapper.jpg'
+
+<img src={mediocreMapper} style={{ width: '90vh' }} />
+
+---
+
+- Windows only
+- Complicated installation
+- Awful usability
+
+---
+
+# For example...
+
+---
+
+import songCreateScreen from '../assets/song-create-screen.png'
+
+<img src={songCreateScreen} style={{ width: '90vh' }} />
+
+---
+
+import createDifficulty from '../assets/create-difficulty.png'
+
+<img src={createDifficulty} style={{ width: '90vh' }} />
+
+---
+
+import wrongError from '../assets/wrong-error.png'
+
+<img src={wrongError} style={{ width: '90vh' }} />
+
+---
+
+If you can get it to work, it's alright.
+
+---
+
+import mmDemo from '../assets/mm-demo.mp4'
+
+<video
+  src={mmDemo}
+  autoPlay
+  loop
+  style={{ width: '80%' }}
+/>
+
+---
+
+
+Doesn't work on Mac. Even in Bootcamp.
+
+---
+
+"There has to be a better way!"
+
+---
+
+"...could this be a React app?"
+
+<!-- I couldn't use it anyway, since I only had a Mac at the time.
+
+On Bootcamp, the mouse didn't work.
+
+So if I can't use the existing software, maybe I can build my own... -->
+
+---
+
+<TitleCard />
+
+---
+
+export default LightSlide
+
+import me from '../assets/me.jpg';
+
+<Avatar src={me} />
+
+# @JoshWComeau
+
+---
+
+export default LightSlide
+
+<TwitterHandle />
+
+<svg class="SVGInline-svg logo-svg" style={{ height: 200, display: `block`, margin: `auto` }} preserveAspectRatio="xMinYMin meet" viewBox="0 0 106 28"><path d="M62.9 12h2.8v10h-2.8v-1.3c-1 1.5-2.3 1.6-3.1 1.6-3.1 0-5.1-2.4-5.1-5.3 0-3 2-5.3 4.9-5.3.8 0 2.3.1 3.2 1.6V12zm-5.2 5c0 1.6 1.1 2.8 2.8 2.8 1.6 0 2.8-1.2 2.8-2.8 0-1.6-1.1-2.8-2.8-2.8-1.6 0-2.8 1.2-2.8 2.8zM71.2 14.4V22h-2.8v-7.6h-1.1V12h1.1V8.6h2.8V12h1.9v2.4h-1.9zM79.7 14.4c-.7-.6-1.3-.7-1.6-.7-.7 0-1.1.3-1.1.8 0 .3.1.6.9.9l.7.2c.8.3 2 .6 2.5 1.4.3.4.5 1 .5 1.7 0 .9-.3 1.8-1.1 2.5s-1.8 1.1-3 1.1c-2.1 0-3.2-1-3.9-1.7l1.5-1.7c.6.6 1.4 1.2 2.2 1.2.8 0 1.4-.4 1.4-1.1 0-.6-.5-.9-.9-1l-.6-.2c-.7-.3-1.5-.6-2.1-1.2-.5-.5-.8-1.1-.8-1.9 0-1 .5-1.8 1-2.3.8-.6 1.8-.7 2.6-.7.7 0 1.9.1 3.2 1.1l-1.4 1.6zM85.8 13.3c1-1.4 2.4-1.6 3.2-1.6 2.9 0 4.9 2.3 4.9 5.3s-2 5.3-5 5.3c-.6 0-2.1-.1-3.2-1.6V22H83V5.2h2.8v8.1zm-.3 3.7c0 1.6 1.1 2.8 2.8 2.8 1.6 0 2.8-1.2 2.8-2.8 0-1.6-1.1-2.8-2.8-2.8-1.7 0-2.8 1.2-2.8 2.8zM98.5 20.5L93.7 12H97l3.1 5.7 2.8-5.7h3.2l-8 15.3h-3.2l3.6-6.8zM54 13.7h-2.8H47v2.8h3.7c-.6 1.9-2 3.2-4.6 3.2-2.9 0-5-2.4-5-5.3S43.1 9 46 9c1.6 0 3.2.8 4.2 2.1l2.3-1.5C51 7.5 48.6 6.3 46 6.3c-4.4 0-8 3.6-8 8.1s3.4 8.1 8 8.1 8-3.6 8-8.1c.1-.3 0-.5 0-.7z"></path><g><path style={{ fill: '#FFF'}} d="M25 14h-7v2h4.8c-.7 3-2.9 5.5-5.8 6.5L5.5 11c1.2-3.5 4.6-6 8.5-6 3 0 5.7 1.5 7.4 3.8l1.5-1.3C20.9 4.8 17.7 3 14 3 8.8 3 4.4 6.7 3.3 11.6l13.2 13.2C21.3 23.6 25 19.2 25 14zM3 14.1c0 2.8 1.1 5.5 3.2 7.6 2.1 2.1 4.9 3.2 7.6 3.2L3 14.1z"></path><path style={{ fill: 'rgb(102, 51, 153)' }} d="M14 0C6.3 0 0 6.3 0 14s6.3 14 14 14 14-6.3 14-14S21.7 0 14 0zM6.2 21.8C4.1 19.7 3 16.9 3 14.2L13.9 25c-2.8-.1-5.6-1.1-7.7-3.2zm10.2 2.9L3.3 11.6C4.4 6.7 8.8 3 14 3c3.7 0 6.9 1.8 8.9 4.5l-1.5 1.3C19.7 6.5 17 5 14 5c-3.9 0-7.2 2.5-8.5 6L17 22.5c2.9-1 5.1-3.5 5.8-6.5H18v-2h7c0 5.2-3.7 9.6-8.6 10.7z"></path></g></svg>
+
+---
+
+import blog1 from '../assets/blog-1.png';
+
+<img src={blog1} style={{ width: '100%' }} />
+
+<TwitterHandle />
+
+---
+
+import blog2 from '../assets/blog-2.png';
+
+<img src={blog2} style={{ width: '100%' }} />
+
+<TwitterHandle />
+
+---
+
+import blog3 from '../assets/blog-3.png';
+
+<img src={blog3} style={{ width: '100%' }} />
+
+<TwitterHandle />
+
+---
+
+import blog4 from '../assets/blog-4.png';
+
+<img src={blog4} style={{ width: '100%' }} />
+
+<TwitterHandle />
+
+---
+
+joshwcomeau.com
+
+<TwitterHandle />
+
+---
+
+Product demo
+
+<TwitterHandle />
+
+
+---
+
+# This is a React app.
+
+If you're comfortable with React, you'd probably be able to start contributing to this pretty quickly!
+
+<TwitterHandle />
+
+
+---
+
+# Intro to 3D
+
+The browser supports WebGL, which is an implementation of OpenGL, a low level graphics language.
+
+<TwitterHandle />
+
+
+---
+
+export default (props) => (
+  <CodeSlide
+    {...props}
+    lang="html"
+    code={require('raw-loader!./code/webgl-hello-world.example')}
+    ranges={[
+      { loc: [0], title: 'Hello World' },
+      { loc: [0, 20] },
+      { loc: [21, 40] },
+      { loc: [41, 60] },
+      { loc: [61, 80] },
+      { loc: [81, 100] },
+      { loc: [101, 120] },
+      { loc: [121, 140] },
+      { loc: [141, 160] },
+      { loc: [157, 172] },
+    ]}
+  />
+)
+
+
+---
+
+import webglHelloWorld from '../assets/webgl-hello-world.png';
+
+<div style={{ height: '80vh', overflow: 'scroll'}}>
+  <img src={webglHelloWorld} style={{ height: '200vh' }} />
+</div>
+
+<TwitterHandle />
+
+
+---
+
+import webglTriangle from '../assets/webgl-triangle.png';
+
+<img src={webglTriangle} style={{ width: '75%' }} />
+
+<TwitterHandle />
+
+
+---
+
+# Three.js
+
+Three.js is a lovely wrapper that makes WebGL manageable
+
+<TwitterHandle />
+
+---
+
+
+export default (props) => (
+  <CodeSlide
+    {...props}
+    lang="jsx"
+    code={require('raw-loader!./code/three-hello-world.example')}
+    ranges={[
+      { loc: [0], title: 'Hello World' },
+      { loc: [0, 1], note: 'Start a scene 🔥' },
+      { loc: [2, 8] },
+      { loc: [8, 9] },
+      { loc: [10, 13] },
+      { loc: [14, 24] },
+      { loc: [25, 30] },
+      { loc: [31, 35] },
+      { loc: [36, 41] },
+      { loc: [42, 50] },
+      { loc: [51, 53] },
+      { loc: [54, 62] },
+      { loc: [63, 64] },
+    ]}
+  />
+)
+
+---
+
+import cube from '../assets/cube.gif';
+
+<img src={cube} style={{ width: '85%' }} />
+
+<TwitterHandle />
+
+---
+
+(Original Credit: https://medium.com/@necsoft/three-js-101-hello-world-part-1-443207b1ebe1)
+
+<TwitterHandle />
+
+---
+
+import threeJsDemo from '../assets/threejs-demo.mp4'
+
+<video
+  src={threeJsDemo}
+  autoPlay
+  loop
+  style={{ width: '80%' }}
+/>
+
+
+<TwitterHandle />
+
+---
+
+Most creative portfolio site: <a href="https://bruno-simon.com/" target="_blank">Bruno Simon</a>.
+
+<TwitterHandle />
+
+---
+
+# React Three Fiber
+
+<TwitterHandle />
+
+---
+
+*React renderer* for the Three.js elements we've seen.
+
+<TwitterHandle />
+
+---
+
+### Custom renderer 🤯
+
+<TwitterHandle />
+
+---
+
+ReactDOM has `div`, `h1`…
+
+ReactThreeFiber has `boxGeometry`, `ambientLight`…
+
+<TwitterHandle />
+
+---
+
+export default (props) => (
+  <CodeSlide
+    {...props}
+    lang="jsx"
+    code={require('raw-loader!./code/r3f-hello-world.example')}
+    ranges={[
+      { loc: [0], title: 'Hello World (One more time)' },
+      { loc: [0, 5] },
+      { loc: [6, 7] },
+      { loc: [7, 11] },
+      { loc: [12, 18] },
+      { loc: [19, 20] },
+      { loc: [20, 25] },
+      { loc: [26, 30] },
+      { loc: [30, 34] },
+      { loc: [38, 39] },
+      { loc: [40, 41] },
+      { loc: [41, 42] },
+      { loc: [43, 47] },
+    ]}
+  />
+)
+
+---
+
+
+# `<Canvas>`
+
+Many things are created for you in a `Canvas` component:
+
+- scene
+- camera
+- renderer
+- `<canvas>` element
+
+<TwitterHandle />
+
+---
+
+# Attaching
+
+```jsx
+<mesh>
+  <boxGeometry attach="geometry" />
+  <meshPhongMaterial attach="material" />
+</mesh>
+```
+
+<TwitterHandle />
+
+---
+
+# World of convenience
+
+Think about what we _didn't_ need to do:
+- Create a scene
+- Configure a camera
+- Manage instances
+- manage event loop
+
+<TwitterHandle />
+
+---
+
+### React Lifecycle for 3D is POWERFUL
+
+- Handles cleanup for us!
+
+<TwitterHandle />
+
+
+---
+
+# More than Hello World
+
+https://twitter.com/jmwind/status/1255101384338391040
+
+<TwitterHandle />
+
+---
+
+# Community
+
+<TwitterHandle />
+
+---
+
+I made Beatmapper for myself.
+
+<TwitterHandle />
+
+---
+
+I'm pretty proud of it though. And I liked the idea of other people using it.
+
+<TwitterHandle />
+
+---
+
+I shared it in the Beat Saber Modding Group discord... and I started getting ~feedback~
+
+<TwitterHandle />
+
+---
+
+# How dare you release imperfect software?!
+
+<TwitterHandle />
+
+---
+
+We see this in open-source
+
+<TwitterHandle />
+
+---
+
+People expect customer support without paying for customer support
+
+<TwitterHandle />
+
+---
+
+# User Requests
+
+<TwitterHandle />
+
+---
+
+I got _a lot_ of requests.
+
+<TwitterHandle />
+
+---
+
+export default LightSlide
+
+# Most popular request: Bongo Cat
+
+import bongoCatMeme from '../assets/bongo-cat-meme.gif'
+
+<img src={bongoCatMeme} style={{ height: '70vh' }} />
+
+<TwitterHandle />
+
+---
+
+import bongoCat from '../assets/bongo-cats.mp4'
+
+<video
+  src={bongoCat}
+  autoPlay
+  loop
+  style={{ width: '80%' }}
+/>
+
+<TwitterHandle />
+
+---
+
+I like cats... but I wanted to get away from this meme subculture
+
+<TwitterHandle />
+
+---
+
+The community was full of wonderful people, but there was a serious "reddit" vibe.
+
+<TwitterHandle />
+
+---
+
+I wanted an editor that wouldn't alienate untraditional gamers.
+
+<TwitterHandle />
+
+---
+
+In terms of user growth, it was slow and steady... until it wasn't.
+
+<TwitterHandle />
+
+---
+
+But I'm getting ahead of myself.
+
+Let's get back to code stuff.
+
+<TwitterHandle />
+
+---
+
+# Lighting and Events
+
+<TwitterHandle />
+
+---
+
+Beat Saber has a complex environment system
+
+<TwitterHandle />
+
+---
+
+import beatSaberEnvironment from '../assets/beat-saber-env.jpg'
+
+<img
+  src={beatSaberEnvironment}
+  style={{ width: '100%' }}
+/>
+
+<TwitterHandle />
+
+---
+
+Every map includes *custom lighting*.
+
+<TwitterHandle />
+
+
+---
+
+There are
+
+- 3 lasers
+- 1 bright light
+- track neons
+- two sets of giant rotateable rings
+
+<TwitterHandle />
+
+---
+
+Lighting Editor
+
+https://beatmapper.app/edit/remember/ExpertPlus/events
+
+<TwitterHandle />
+
+---
+
+It wasn't quite right though...
+
+<TwitterHandle />
+
+---
+
+# Post-processing
+
+<TwitterHandle />
+
+---
+
+
+import beatSaberEnvironment from '../assets/beat-saber-env.jpg'
+
+<img
+  src={beatSaberEnvironment}
+  style={{ width: '100%' }}
+/>
+
+<TwitterHandle />
+
+---
+
+
+import noBloom from '../assets/no-bloom.png'
+
+<img
+  src={noBloom}
+  style={{ width: '100%' }}
+/>
+
+<TwitterHandle />
+
+---
+
+import bloom from '../assets/bloom.png'
+
+<img
+  src={bloom}
+  style={{ width: '100%' }}
+/>
+
+<TwitterHandle />
+
+---
+
+import bloomExplanation from '../assets/bloom-explanation.png'
+
+<img
+  src={bloomExplanation}
+  style={{ width: '100%' }}
+/>
+
+<TwitterHandle />
+
+---
+
+_Selective_ bloom.
+
+<TwitterHandle />
+
+---
+
+
+import noBloom from '../assets/no-bloom.png'
+
+<img
+  src={noBloom}
+  style={{ width: '100%' }}
+/>
+
+<TwitterHandle />
+
+---
+
+
+export default (props) => (
+  <CodeSlide
+    {...props}
+    lang="jsx"
+    code={require('raw-loader!./code/bloom.example')}
+    ranges={[
+      { loc: [0], title: 'Bloom Demo' },
+      { loc: [0, 4], note: '"Vanilla" Three.js utilities' },
+      { loc: [5, 6], note: 'Bloom Component' },
+      { loc: [6, 7] },
+      { loc: [8, 10] },
+      { loc: [11, 12] },
+      { loc: [35, 36] },
+      { loc: [12, 13] },
+      { loc: [14, 17] },
+      { loc: [18, 27] },
+      { loc: [28, 29] },
+      { loc: [30, 33] },
+      { loc: [34, 35] },
+      { loc: [37, 46] },
+      { loc: [47, 50] },
+      { loc: [51, 56] },
+    ]}
+  />
+)
+
+---
+
+export default (props) => (
+  <CodeSlide
+    {...props}
+    lang="jsx"
+    code={require('raw-loader!./code/bloom-usage.example')}
+    ranges={[
+      { loc: [0], title: 'Bloom Usage' },
+      { loc: [2, 3] },
+      { loc: [3, 7] },
+      { loc: [9, 10] },
+      { loc: [10, 14] },
+    ]}
+  />
+)
+
+---
+
+# Demo
+
+https://beatmapper.app/edit/the-main-component/Easy/preview
+
+<TwitterHandle />
+
+
+---
+
+# Rickrolled
+
+<TwitterHandle />
+
+---
+
+Even with its usability issues, MediocreMapper was widely popular. Beatmapper was a _distant_ second.
+
+<TwitterHandle />
+
+---
+
+I was happy with this.
+
+<TwitterHandle />
+
+---
+
+And then, MediocreMapper imploded.
+
+<TwitterHandle />
+
+---
+
+import rickroll from '../assets/rickroll.gif'
+
+<img src={rickroll} style={{ position: 'absolute', top: 0, left: 0, height: '100vh', width: '100vw', objectFit: 'cover' }} />
+
+<TwitterHandle />
+
+---
+
+Nobody wants the burden of having the #1 editor.
+
+<TwitterHandle />
+
+---
+
+All of a sudden, Beatmapper was the default editor.
+
+<TwitterHandle />
+
+---
+
+import trafficSpike from '../assets/traffic-spike.png'
+
+<img src={trafficSpike} style={{ width: '100%' }} />
+
+<TwitterHandle />
+
+---
+
+This was a nightmare.
+
+The community already drove one maintainer to explode their editor… was I next?
+
+<TwitterHandle />
+
+---
+
+# File Management
+
+<TwitterHandle />
+
+---
+
+So, Beatmapper is a _100% local_ web app. There is no backend.
+
+<TwitterHandle />
+
+---
+
+# Why?
+
+<TwitterHandle />
+
+---
+
+import fbi from '../assets/fbi.png';
+
+<img src={fbi} style={{ maxWidth: '60%' }} />
+
+<TwitterHandle />
+
+---
+
+### Also: costs
+
+<TwitterHandle />
+
+---
+
+# Question
+
+In a local-only webapp, how do you access files?
+
+<TwitterHandle />
+
+---
+
+
+For security reasons, the browser can't access the hard drive.
+
+<TwitterHandle />
+
+---
+
+# Options
+
+<TwitterHandle />
+
+---
+
+import fileSystemApi from '../assets/file-system-api.png'
+
+<img src={fileSystemApi} style={{ width: '100%'}} />
+
+<TwitterHandle />
+
+---
+
+- Creates a "virtual drive", sandboxed from the rest of the system
+- Supports directories and files
+
+<TwitterHandle />
+
+---
+
+
+import fileSystemApiDeprecated from '../assets/file-system-api-deprecated.png'
+
+<img src={fileSystemApiDeprecated} style={{ width: '100%'}} />
+
+<TwitterHandle />
+
+---
+
+import writableFilesApi from '../assets/writable-files-api.png'
+
+<img src={writableFilesApi} style={{ width: '100%'}} />
+
+<TwitterHandle />
+
+---
+
+- Secure access to a portion of the user's hard drive
+- Perfect for what I need 💯
+
+<TwitterHandle />
+
+---
+
+import writableFilesStatus from '../assets/writable-files-status.png'
+
+<img src={writableFilesStatus} style={{ width: '100%'}} />
+
+<TwitterHandle />
+
+---
+
+# IndexedDB!
+
+- Not actually meant for files at all
+- Transient
+- No other choice 😬
+
+<TwitterHandle />
+
+---
+
+You can save locally-selected files as **blobs** in IndexedDB.
+
+---
+
+More about storage: https://web.dev/storage-for-the-web/
+
+<TwitterHandle />
+
+---
+
+# Multiple files
+
+- Song file
+- Cover art
+- Main config file
+- One json per difficulty
+
+<TwitterHandle />
+
+---
+
+# Problem: How do I send the user all of these files?
+
+<TwitterHandle />
+
+---
+
+- JSZip — the ability to uncompress and decompress files.
+- file-saver — lets you save files generated on the client.
+
+<TwitterHandle />
+
+---
+
+I had to stitch a lot of stuff together, but I have a near-perfect solution. Everything happens in-browser.
+
+<TwitterHandle />
+
+---
+
+# Back to my story…
+
+<TwitterHandle />
+
+---
+
+So Beatmapper was suddenly the #1 editor. And my inbox filled up with complaints and requests.
+
+<TwitterHandle />
+
+---
+
+Happily, "fork" culture won out
+
+<TwitterHandle />
+
+---
+
+import forkOfAFork from '../assets/fork-of-a-fork.png'
+
+<img src={forkOfAFork} style={{ width: '100%' }} />
+
+<TwitterHandle />
+
+---
+
+import trafficValley from '../assets/traffic-valley.png'
+
+<img src={trafficValley} style={{ width: '100%' }} />
+
+<TwitterHandle />
+
+---
+
+Beatmapper is a niche editor used by a small but passionate group of mappers.
+
+I hear from them occasionally. They're kind.
+
+<TwitterHandle />
+
+---
+
+# The lesson
+
+Two things are true
+
+- I could not have made this editor without the amazing tools built by the community
+- It's exhausting maintaining OSS. It's often no fun at all.
+
+<TwitterHandle />
+
+---
+
+**Be kind to people who build your tools.**
+
+<TwitterHandle />
+
+---
+
+Do this out of self-interest. You depend on them.
+
+<TwitterHandle />
+
+---
+
+If you don't, you might get rickrolled.
+
+<TwitterHandle />
+
+---
+
+# Thank you!
+
+Slides, code, and more:
+
+**joshwcomeau.com/react-europe-talk-2020**
+
+<TwitterHandle />
+
+
+<!-- https://beatsaver.com/uploader/5d152d44f8aa08000618017e -->
